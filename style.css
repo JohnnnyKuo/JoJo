@@ -214,9 +214,9 @@ body {
       }
       #goDown0{
         position: absolute;
-        right:-1vw;
+        right:3vw;
         top:  50%;
-        width: 5vw;
+        width: 6vw;
         cursor: pointer;
       }
     
@@ -231,7 +231,7 @@ body {
       }
       }
 
-    @media only screen and (max-width: 1140px) {/**/
+    @media only screen and (max-width: 1140px) {/*1010~1140*/
         .gotoUp {
             position: absolute;
             left: -5vw;
@@ -267,19 +267,19 @@ body {
             display: none;
           }
         }
-        @media only screen and (max-width: 1010px) {/*(iphone)*/
+        @media only screen and (max-width: 1010px) {/*810~1140(iphone)*/
             .gotoUp {
                 position: absolute;
-                left: -5vw;
-                top: 50%;
-                width: 5vw;
+                left: 0vw;
+                top: 100%;
+                width: 10vw;
                 cursor: pointer;
             }
             .gotodown {
                 position: absolute;
-                right:-5vw;
-                top:  50%;
-                width: 5vw;
+                right:-1vw;
+                top:  100%;
+                width: 10vw;
                 cursor: pointer;
                 
                 
@@ -319,19 +319,19 @@ body {
               }
               
             }
-              @media only screen and (max-width: 810px) {/**/
+              @media only screen and (max-width: 810px) {/*710~810*/
                 .gotoUp {
                     position: absolute;
-                    left: -4vw;
-                    top: 50%;
-                    width: 5vw;
+                    left: 0vw;
+                    top: 100%;
+                    width: 10vw;
                     cursor: pointer;
                 }
                 .gotodown {
                     position: absolute;
-                    right:-4vw;
-                    top:  50%;
-                    width: 5vw;
+                    right:0vw;
+                    top:  100%;
+                    width: 10vw;
                     cursor: pointer;
                     
                     
@@ -369,23 +369,21 @@ body {
                     width:8%;
                     cursor: pointer;
                   }
-                @media only screen and (max-width: 710px) /**/
+                @media only screen and (max-width: 710px) /*610~710*/
                   {
                     .gotoUp {
                         position: absolute;
-                        left: -5vw;
-                        top: 50%;
-                        width: 5vw;
+                        left: 0vw;
+                        top: 100%;
+                        width: 10vw;
                         cursor: pointer;
                     }
                     .gotodown {
                         position: absolute;
-                        right:-5vw;
-                        top:  50%;
-                        width: 5vw;
+                        right:0vw;
+                        top:  100%;
+                        width: 10vw;
                         cursor: pointer;
-                        
-                        
                     }
                     
                     .page {
@@ -406,21 +404,28 @@ body {
                         height: 100%;
                         display: none;
                       }
+                      #goDown0{
+                        position: absolute;
+                        right:10vw;
+                        top:  50%;
+                        width: 6vw;
+                        cursor: pointer;
+                      }
                     }
-                    @media only screen and (max-width: 610px) /**/
+                    @media only screen and (max-width: 610px) /*500~610*/
                   {
                     .gotoUp {
                         position: absolute;
-                        left: -5vw;
-                        top: 50%;
-                        width: 5vw;
+                        left: 0vw;
+                        top: 100%;
+                        width: 10vw;
                         cursor: pointer;
                     }
                     .gotodown {
                         position: absolute;
-                        right:-5vw;
-                        top:  50%;
-                        width: 5vw;
+                        right:0vw;
+                        top:  100%;
+                        width: 10vw;
                         cursor: pointer;
                         
                         
@@ -450,21 +455,28 @@ body {
                         width:8%;
                         cursor: pointer;
                       }
+                      #goDown0{
+                        position: absolute;
+                        right:15vw;
+                        top:  50%;
+                        width: 6vw;
+                        cursor: pointer;
+                      }
                     }
-                    @media only screen and (max-width: 500px) /**/
+                    @media only screen and (max-width: 500px) /*500下*/
                   {
                     .gotoUp {
                         position: absolute;
-                        left: -5vw;
-                        top: 50%;
-                        width: 5vw;
+                        left: 0vw;
+                        top: 100%;
+                        width: 10vw;
                         cursor: pointer;
                     }
                     .gotodown {
                         position: absolute;
-                        right:-5vw;
-                        top:  50%;
-                        width: 5vw;
+                        right:0vw;
+                        top:  100%;
+                        width: 10vw;
                         cursor: pointer;
                         
                         
