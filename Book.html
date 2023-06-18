@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>娜蕾與啾啾的探險之旅</title>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser-arcade-physics.js"></script> -->
+        <link rel="stylesheet" href="style.css">
+        
+
+    </head>
+
+<style>
+   
+</style>
+
+    <body>
+
+        <img src="BookPic/Wood.jpg" class=" " style= "width:100%;height: 200%; position: absolute; ">
+
+        <div id="All">
+        <div id="containtOut">
+            <!-- <img src= "BookPic/bookmu.PNG" class="bookmu " style= " "> -->
+
+        </div>
+        <div id="containt">
+            
+		    <div id="page0" class="page page1">
+                <img src="BookPic/bookCover.png" class=" backgroundtop" >
+                <img src="BookPic/Tool/goDown.PNG" class="gotodown" id="goDown0" onclick="gotoPage(1)">
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker "id="audio1" >
+            </div>
+
+            <div id="page1" class="page">
+            	<img src="BookPic/P2P3.jpg" class="background" >
+                <!-- left -->
+            	<img src="BookPic/People/P2P3LeftGif.GIF" id="P2P3chgpic1" class="" style="position: absolute;top:29%;left:5%;width:40%;cursor: pointer;">
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="audio2" style="position: absolute; top:1%; left:3%; width:8%;cursor: pointer;">
+                <div class="parent">
+                    <div class="rectangle"  style=" top:10%; left:28%; width:20%; height: 7%;"></div>
+                    <img src="BookPic/Word/P2下午那雷正在練習手.png" class="Text"id="P2mp1" style="position: absolute; top:11%; left:29%; width:22%;">
+                </div>
+                <div class="parent">
+                <div class="rectangle"  style=" bottom:5%; left:4%; width:42%; height: 13%;"></div>
+                <img src="BookPic/Word/P2啾啾問那雷長大想當甚麼.png" class="Text" id="P2mp2" style="position: absolute; bottom:8%; left:5%; width:40%;">
+                </div>
+                <!-- right -->
+            	<img src="BookPic/People/P2P3RightGif.GIF" id="P2P3chgpic2" class="" style="position: absolute;bottom:16%;right:4%;width:40%;cursor: pointer;">
+                <img src="BookPic/Word/P3啾啾說那我們出去看看.png" class="Text"id="P3mp1" style="position: absolute; top:5%; right:2%; width:45%;">
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="audio3" style="position: absolute; top:1%; left:52%; width:8%;cursor: pointer;">
+                <!-- page -->
+				<img src="BookPic/Tool/goUp.PNG" id="goUp1"class="gotoUp" onclick="gotoPage(0)">
+            	<img src="BookPic/Tool/goDown.PNG" id="goDown1"class="gotodown" onclick="gotoPage(2)">
+                <h2 class="PagenumL">2</h2>
+                <h2 class="PagenumR">3</h2>
+			
+            </div>
+
+            <div id="page2" class="page">
+                <img src="BookPic/P4P5.JPG" class="background" >
+                <!-- left -->
+            	<img src="BookPic/People/P4P5LeftGif.gif" id="P4P5chgpic1" class="" style="position: absolute;bottom:4%;left:5%;width:100%;cursor: pointer;">
+                <div class="parent">
+                <div class="rectangle" style=" bottom:6%; left:3%; width:27%; height: 10%;"></div>
+                <img src="BookPic/Word/P4走在路邊那雷想了很久.png" class="Text" style="position: absolute; bottom:8%; left:5%; width:25%;cursor:pointer;">
+                </div>
+                <img src="BookPic/Tool/ClickRadio.GIF"class="speaker" id="audio4" style="position: absolute; top:1%; left:3%; width:8%;cursor: pointer;">
+                <!-- right -->
+            	<img src="BookPic/People/P4P5RightPic.PNG" id="P4P4chgpic2" class="" style="position: absolute;bottom:2.3%;right:0.5%;width:50%;">
+                <div class="parent">
+                <div class="rectangle" style=" top:8%; right:2%; width:42%; height: 8%;"></div>
+                <img src="BookPic/Word/P5挖前面是忠貞新村.png" class="Text" style="position: absolute; top:10%; right:2%; width:40%;cursor:pointer;">
+                </div>
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="audio5" style="position: absolute; top:1%; left:52%; width:8%;cursor: pointer;">
+                <!-- page -->
+			    <img src="BookPic/Tool/goUp.PNG" id="goUp2"class="gotoUp" onclick="gotoPage(1)">
+                <img src="BookPic/Tool/goDown.PNG" id="goDown2"class="gotodown" onclick="gotoPage(3)">
+                <h2 class="PagenumL">4</h2>
+                <h2 class="PagenumR">5</h2>
+            </div>
+
+            <div id="page3" class="page">
+                <img src="BookPic/P6P7.JPG" class="background" >
+                <!-- right -->
+            	<img src="BookPic/People/P6P7RightPic.PNG" id="P6P7chgpic1" class="" style="position: absolute;bottom:1%;left:-1%;width:100%;">
+                <div class="parent">
+                <div class="rectangle" style=" top:8%; right:0.5%; width:42%; height: 8%;"></div>
+                <img src="BookPic/Word/P7姊姊的夢想是甚麼.png" class="Text"id="P4mp1" style="position: absolute; top:10%; right:2%; width:40%;">
+                </div>
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="P7speaker" style="position: absolute; top:1%; left:3%; width:8%;cursor: pointer;">
+                <!-- page -->
+			        <img src="BookPic/Tool/goUp.PNG" id="goUp3" class="gotoUp" onclick="gotoPage(2)">
+                    <img src="BookPic/Tool/goDown.PNG" id="goDown3"class="gotodown" onclick="gotoPage(4)">
+                        <h2 class="PagenumL">6</h2>
+                        <h2 class="PagenumR">7</h2>
+            </div>
+
+	        <div id="page4" class="page">
+                <img src="BookPic/P8P9.jpg" class="background" >
+            	<img src="BookPic/People/P8P9RightGif.GIF" id="P8P9chgpic1" class="" style="position: absolute;top:12%;left:35%;width:60%;cursor: pointer;">
+                <img src="BookPic/Word/P9小時候想當美人魚.png" class="Text";id="P4mp1" style="position: absolute; top:10%; right:13%; width:30%;">
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="P9speaker" style="position: absolute; top:1%; left:3%; width:8%;cursor: pointer;">
+                <!-- page -->
+			        <img src="BookPic/Tool/goUp.PNG" id="goUp4" class="gotoUp" onclick="gotoPage(3)">
+                    <img src="BookPic/Tool/goDown.PNG" id="goDown4"class="gotodown" onclick="gotoPage(5)">
+                    <h2 class="PagenumL">8</h2>
+                    <h2 class="PagenumR">9</h2>
+            </div>
+
+	        <div id="page5" class="page">
+                <img src="BookPic/P10P11.png" class="background" >
+            	<img src="BookPic/People/P10P11RightPic.png" id="P8P9chgpic1" class="" style="position: absolute;top:0%;left:0%;width:100%;">
+            	<img src="BookPic/People/P10P11LeftPic.gif" id="P8P9chgpic1" class="" style="position: absolute;top:0%;left:15%;width:102%;">
+			    <img src="BookPic/Tool/goUp.PNG" id="goUp5"class="gotoUp" onclick="gotoPage(4)">
+                <img src="BookPic/Tool/goDown.PNG" id="goDown5"class="gotodown" onclick="gotoPage(6)">
+                <h2 class="PagenumL">10</h2>
+                <h2 class="PagenumR">11</h2>
+            </div>
+
+	        <div id="page6" class="page">
+                <img src="BookPic/P12P13.JPG" class="background" >
+<!-- left -->
+                <img src="BookPic/People/P12P13LeftPic.PNG" id="P8P9chgpic1" class="" style="position: absolute;bottom:2.3%;left:1%;width:100%;">
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="P12speaker" style="position: absolute; top:1%; left:3%; width:8%;cursor: pointer;">
+                <img src="BookPic/Word/P12走著走著來到清真寺.png" class="Text"id="P4mp1" style="position: absolute; top:11%; Left:10%; width:30%;">
+                
+                <a href="https://johnnnykuo.github.io/Puzzle.github.io/Puzzle/index.html" target="_blank"> 
+                    <img src="BookPic/People/PlayGame-removebg-preview.png"  id="" class="playgamePic" style="position: absolute;top:16%;left:30%;width:15%;">
+                </a>
+<!-- R -->
+                <div class="parent">
+                <div class="rectangle" style=" top:9%; right:0.5%; width:43%; height: 10%;"></div>
+                <img src="BookPic/Word/P13叔叔小時候的夢想是甚麼.png" class="Text"; id="P4mp1" style="position: absolute; top:10%; right:3%; width:40%;">
+                </div>
+                <img src="BookPic/Tool/ClickRadio.GIF"id="P13speaker" style="position: absolute; top:1%; left:52%; width:8%;cursor: pointer;">
+<!-- p -->
+                <audio src="music/音效/叭叭叭.mp3" ></audio>
+			    <img src="BookPic/Tool/goUp.PNG" id="goUp6"class="gotoUp" onclick="gotoPage(5)">
+                <img src="BookPic/Tool/goDown.PNG" id="goDown6"class="gotodown" onclick="gotoPage(7)">
+                <h2 class="PagenumL">12</h2>
+                <h2 class="PagenumR">13</h2>
+            </div>
+
+	        <div id="page7" class="page">
+                <img src="BookPic/P14P15.jpg" class="background" >
+                <!-- R -->
+            	<img src="BookPic/People/P14P15RightPic.PNG" id="P8P9chgpic1" class="" style="position: absolute;top:0%;left:0%;width:100%;">
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker"id="P15speaker" style="position: absolute; top:1%; left:52%; width:8%;cursor: pointer;">
+                <div class="parent">
+                <div class="rectangle" style=" top:10%; right:1%; width:43%; height: 10%;"></div>
+                <img src="BookPic/Word/P15夢想當飛行員.png" class=" Text" id="P4mp1" style="position: absolute; top:12%; right:3%; width:40%;">
+			    </div>
+                <!-- P -->
+                <img src="BookPic/Tool/goUp.PNG" id="goUp7"class="gotoUp" onclick="gotoPage(6)">
+                <img src="BookPic/Tool/goDown.PNG" id="goDown7"class="gotodown" onclick="gotoPage(8)">
+                <h2 class="PagenumL">14</h2>
+                <h2 class="PagenumR">15</h2>
+            </div>
+
+	        <div id="page8" class="page">
+                <img src="BookPic/P16P17.JPG" class="background" >
+                <!-- P -->
+            	<img src="BookPic/People/P16P17LeftPic.png" id="P8P9chgpic1" class="" style="position: absolute;top:0%;left: 0%;width:100%;">
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="P16speaker" style="position: absolute; top:1%; left:3%; width:8%;cursor: pointer;">
+                
+                <div class="parent">
+                <div class="rectangle" style=" top:37%; left:5.5%; width:36%; height: 20%;"></div>
+                <img src="BookPic/Word/P16為甚麼夢想都沒有成真.png" class="Text"id="P4mp1" style="position: absolute; top:41%; left:7%; width:35%;">
+                </div>
+                <!-- R -->
+            	<img src="BookPic/People/P16P17RightGif.GIF" id="P16P17chgpic1" class="" style="position: absolute;top:10%;right:8%;width:35%;">
+                <img src="BookPic/Word/P17還是打手跌的時候最開心.png"  class="Text" id="P4mp1" style="position: absolute; bottom:13%; right:4%; width:40%;">
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="P17speaker" style="position: absolute; top:1%; left:52%; width:8%;cursor: pointer;">
+                <a href="https://johnnnykuo.github.io/PictureBook.AR.github.io/AR/index.html" target="_blank"> 
+                    <img src="BookPic/People/PlayGame2-removebg-preview.png" id="" class="playgamePic" style="position: absolute;top:2%; left:83%;width:15%;">
+                </a>
+                <!-- P -->
+			    <img src="BookPic/Tool/goUp.PNG" id="goUp8"class="gotoUp" onclick="gotoPage(7)">
+                <img src="BookPic/Tool/goDown.PNG" id="goDown8"class="gotodown" onclick="gotoPage(9)">
+                <h2 class="PagenumL">16</h2>
+                <h2 class="PagenumR">17</h2>
+            </div>
+
+	        <div id="page9" class="page">
+                <img src="BookPic/P18P19.JPG" class="background" >
+            <!-- R -->
+            	<img src="BookPic/People/P18P19RightGif.gif" id="P18P19chgpic1" class="" style="position: absolute;top:2.2%;left:0%;width:100%;">
+                <div class="parent">
+                <div class="rectangle" style=" top:19%; left:9%; width:45%; height: 18%;"></div>
+                <img src="BookPic/Word/P18你會不會覺得我很笨.png" class="Text" id="P4mp1" style="position: absolute; top:20%; left:10%; width:45%;">
+                </div>
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="P18speaker" style="position: absolute; top:1%; left:3%; width:8%;cursor: pointer;">
+            <!-- P -->
+			    <img src="BookPic/Tool/goUp.PNG" id="goUp9" class="gotoUp" onclick="gotoPage(8)">
+                <img src="BookPic/Tool/goDown.PNG" id="goDown9"class="gotodown" onclick="gotoPage(10)">
+                <h2 class="PagenumL">18</h2>
+                <h2 class="PagenumR">19</h2>
+                
+
+
+            </div>
+
+	        <div id="page10" class="page">
+                <img src="BookPic/P20P21.png" class="background" >
+                <!-- L -->
+            	<img src="BookPic/People/P20P21RightPic.PNG" id="P8P9chgpic1" class="" style="position: absolute;top:-3%;left:-3%;width:103%;">
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="P20speaker" style="position: absolute; top:1%; left:3%; width:8%;cursor: pointer;">
+                <img src="BookPic/Word/P20一位盲人音樂家在.png" class="Text" id="P4mp1" style="position: absolute; top:7%; left:10%; width:35%;">
+                <!-- R -->
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="P21speaker" style="position: absolute; top:1%; left:52%; width:8%;cursor: pointer;">
+
+                <div class="parent">
+                <div class="rectangle" style=" top:8%; right:1%; width:42%; height: 11%;"></div>
+                <img src="BookPic/Word/P21那雷問音樂家的夢想是甚麼.png" class="Text" id="P4mp1" style="position: absolute; top:10%; right:2%; width:40%">
+                </div>
+                <!-- p -->
+			    <img src="BookPic/Tool/goUp.PNG" id="goUp10"class="gotoUp" onclick="gotoPage(9)">
+                <img src="BookPic/Tool/goDown.PNG" id="goDown10"class="gotodown" onclick="gotoPage(11)">
+                <h2 class="PagenumL">20</h2>
+                <h2 class="PagenumR">21</h2>
+            </div>
+
+	        <div id="page11" class="page">
+                <img src="BookPic/P22P23.png" class="background" >
+<!-- L -->
+            	<img src="BookPic/People/P22P23RightGif.gif" id="P22P23chgpic1" class="" style="position: absolute;top:2%;left:0%;width:100%;">
+                <img src="BookPic/Tool/ClickRadio.GIF" class="speaker" id="P22speaker" style="position: absolute; top:1%; left:3%; width:8%;cursor: pointer;">
+                <!-- <img src="BookPic/Tool/ClickMe.GIF" style="position: absolute; top:6%; left:1%; width:35%;pointer-events:none"> -->
+                <div class="glow-circle" style="position: absolute;top:21%; left:7.2%; "></div>
+                <div class="glow-circle" style="position: absolute;top:30.7%; left:8.2%; "></div>
+                <div class="glow-circle" style="position: absolute;top:36.6%; left:14.1%; "></div>
+                <div class="glow-circle" style="position: absolute;top:33.5%; left:21.5%; "></div>
+                <div class="glow-circle" style="position: absolute;top:23.9%; left:23.5%; "></div>
+                <div class="glow-circle" style="position: absolute;top:16.3%; left:19.5%; "></div>
+                <div class="glow-circle" style="position: absolute; top:14.8%; left:12.5%; "></div>
+                <!-- <div class="glow-circle" style="position: absolute;top:21.7%; left:7.2%; "></div> -->
+
+                <img src="BookPic/Tool/note1.PNG" id="P11note1" style="position: absolute; top:21%; left:7.1%; width:4%;cursor: pointer;">
+                <img src="BookPic/Tool/note2.PNG" id="P11note2" style="position: absolute; top:31%; left:8%; width:4%;cursor: pointer;">
+                <img src="BookPic/Tool/note3.PNG" id="P11note3" style="position: absolute; top:36.7%; left:13.8%; width:4%;cursor: pointer;">
+                <img src="BookPic/Tool/note4.PNG" id="P11note4" style="position: absolute; top:33.9%; left:21%; width:4%;cursor: pointer;">
+                <img src="BookPic/Tool/note5.PNG" id="P11note5" style="position: absolute; top:24%; left:23.5%; width:4%;cursor: pointer;">
+                <img src="BookPic/Tool/note6.PNG" id="P11note6" style="position: absolute; top:16.7%; left:19.5%; width:4%;cursor: pointer;">
+                <img src="BookPic/Tool/note7.PNG" id="P11note7" style="position: absolute; top:15%; left:12.5%; width:4%;cursor: pointer;">
+                <!-- R -->
+                <div class="parent">
+                    <div class="rectangle" style=" top:2.5%; left:10%; width:42%; height: 7%;"></div>
+                    <img src="BookPic/Word/P22那天晚上那雷在夢裡.png" class="Text" id="P4mp1" style="position: absolute; top:4%; left:12%; width:38%; ">
+                </div>
+                <div class="parent">
+                    <div class="rectangle" style=" bottom:8%; right:8%; width:44%; height: 8%;"></div>
+                    <img src="BookPic/Word/P23原來那雷的夢想一直在躲貓貓.png" class="Text" id="P4mp1" style="position: absolute; bottom:10%; right:10%; width:40%; ">
+                </div>
+<!-- P -->
+			    <img src="BookPic/Tool/goUp.PNG" id="goUp11"class="gotoUp" onclick="gotoPage(10)">
+                <img src="BookPic/Tool/goDown.PNG" id="goDown11"class="gotodown" onclick="gotoPage(12)">
+                <h2 class="PagenumL">22</h2>
+                <h2 class="PagenumR">23</h2>
+            </div>
+
+	        <div id="page12" class="page">
+                <img src="BookPic/bookLast.png" class="backgroundtop" >
+			    <img src="BookPic/Tool/goUp.PNG" id="goUp12"class="gotoUp" onclick="gotoPage(10)">
+                          
+            </div>
+        </div>
+
+    </div>
+
+
+       <script>
+        //顯示第一頁
+        document.getElementById("page0").style.display = "block";
+
+        function gotoPage(pageNum) {
+            var pages = document.getElementsByClassName("page");
+            for (var i = 0; i < pages.length; i++) {
+            pages[i].style.display = "none";
+            }
+        document.getElementById("page" + pageNum).style.display = "block";
+        }   
+
+        //變換圖片
+        const chimageP2P3chgpic1 =document.getElementById('P2P3chgpic1');
+        const chimagesP2P3chgpic1 =['BookPic/People/P2P3LeftPic.png','BookPic/People/P2P3LeftGif.gif'];
+        let currentIndexP2P3chgpic1=0;
+        chimageP2P3chgpic1.addEventListener('click',()=>
+        {
+            currentIndexP2P3chgpic1++;
+
+            if(currentIndexP2P3chgpic1 === chimagesP2P3chgpic1.length)
+            {
+                currentIndexP2P3chgpic1 = 0;
+            }
+
+                chimageP2P3chgpic1.src = chimagesP2P3chgpic1[currentIndexP2P3chgpic1];
+        });
+     
+
+        //點上下停播音樂
+        const goDown0 =document.getElementById('goDown0')
+        goDown0.addEventListener('click',()=>
+        {
+            effectAudioP0speaker.pause();
+        });
+
+        const goUp1 =document.getElementById('goUp1')
+        goUp1.addEventListener('click',()=>
+        { 
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+
+        })
+
+        const goDown1 =document.getElementById('goDown1')
+        goDown1.addEventListener('click',()=>
+        { 
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+
+        })
+
+        const goUp2=document.getElementById('goUp2')
+        goUp2.addEventListener('click',()=>
+        { 
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+
+        })
+
+        const goDown2=document.getElementById('goDown2')
+        goDown2.addEventListener('click',()=>
+        { 
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+
+        })
+
+        const goUp3=document.getElementById('goUp3')
+        goUp3.addEventListener('click',()=>
+        { 
+            effectAudioP7speaker.pause();
+
+        })
+
+        const goDown3=document.getElementById('goDown3')
+        goDown3.addEventListener('click',()=>
+        { 
+            effectAudioP7speaker.pause();
+
+        })
+
+        const goUp4=document.getElementById('goUp4')
+        goUp4.addEventListener('click',()=>
+        { 
+            effectAudioP9speaker.pause();
+
+        })
+
+        const goDown4=document.getElementById('goDown4')
+        goDown4.addEventListener('click',()=>
+        { 
+            effectAudioP9speaker.pause();
+
+        })
+
+        const goUp6=document.getElementById('goUp6')
+        goUp6.addEventListener('click',()=>
+        { 
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+
+        })
+
+        const goDown6=document.getElementById('goDown6')
+        goDown6.addEventListener('click',()=>
+        { 
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+
+        })
+
+
+        const goUp7=document.getElementById('goUp7')
+        goUp7.addEventListener('click',()=>
+        { 
+            effectAudioP15speaker.pause();
+
+        })
+
+        const goDown7=document.getElementById('goDown7')
+        goDown7.addEventListener('click',()=>
+        { 
+            effectAudioP15speaker.pause();
+
+        })
+
+        const goUp8=document.getElementById('goUp8')
+        goUp8.addEventListener('click',()=>
+        { 
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+
+        })
+
+        const goDown8=document.getElementById('goDown8')
+        goDown8.addEventListener('click',()=>
+        { 
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+
+        })
+
+        
+        const goUp9=document.getElementById('goUp9')
+        goUp9.addEventListener('click',()=>
+        {            
+            effectAudioP18speaker.pause();
+        })
+
+        const goDown9=document.getElementById('goDown9')
+        goDown9.addEventListener('click',()=>
+        { 
+            effectAudioP18speaker.pause();
+
+        })
+
+          
+        const goUp10=document.getElementById('goUp10')
+        goUp10.addEventListener('click',()=>
+        {            
+            effectAudioP20speaker.pause();
+           effectAudioP21speaker.pause();
+        })
+
+        const goDown10=document.getElementById('goDown10')
+        goDown10.addEventListener('click',()=>
+        { 
+            effectAudioP20speaker.pause();
+           effectAudioP21speaker.pause();
+
+        })
+        const goUp11=document.getElementById('goUp11')
+        goUp11.addEventListener('click',()=>
+        {            
+            effectAudioP22speaker.pause();
+        })
+
+        const goDown11=document.getElementById('goDown11')
+        goDown11.addEventListener('click',()=>
+        { 
+            effectAudioP22speaker.pause();
+
+        })
+
+
+
+        //各業配音
+        const noteimageP0speaker =document.getElementById('audio1');
+        const effectAudioP0speaker=new Audio('music/配音/P0.mp3');
+        noteimageP0speaker.addEventListener('click',()=>
+        {
+            effectAudioP0speaker.currentTime = 0;
+            effectAudioP0speaker.play();
+
+           effectAudioP2speaker.pause();
+           effectAudioP3speaker.pause();
+           effectAudioP4speaker.pause();
+           effectAudioP5speaker.pause();
+           effectAudioP7speaker.pause();
+           effectAudioP9speaker.pause();
+           effectAudioP12speaker.pause();
+           effectAudioP13speaker.pause();
+           effectAudioP15speaker.pause();
+           effectAudioP16speaker.pause();
+           effectAudioP17speaker.pause();
+           effectAudioP18speaker.pause();
+           effectAudioP20speaker.pause();
+           effectAudioP21speaker.pause();
+           effectAudioP22speaker.pause();
+
+        })
+
+        const noteimageP2speaker =document.getElementById('audio2');
+        const effectAudioP2speaker =new Audio('music/配音/P2.mp3');
+        noteimageP2speaker.addEventListener('click',()=>
+        {
+            effectAudioP2speaker.currentTime = 0;
+            effectAudioP2speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+
+        const noteimageP3speaker =document.getElementById('audio3');
+        const effectAudioP3speaker =new Audio('music/配音/P3.mov');
+        noteimageP3speaker.addEventListener('click',()=>
+        {
+            effectAudioP3speaker.currentTime = 0;
+            effectAudioP3speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+
+        const noteimageP4speaker =document.getElementById('audio4');
+        const effectAudioP4speaker =new Audio('music/配音/P4.mp3');
+        noteimageP4speaker.addEventListener('click',()=>
+        {
+            effectAudioP4speaker.currentTime = 0;
+            effectAudioP4speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+
+        })
+        const noteimageP5speaker =document.getElementById('audio5');
+        const effectAudioP5speaker =new Audio('music/配音/P5.mp3');
+        noteimageP5speaker.addEventListener('click',()=>
+        {
+            effectAudioP5speaker.currentTime = 0;
+            effectAudioP5speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+        const noteimageP7speaker =document.getElementById('P7speaker');
+        const effectAudioP7speaker =new Audio('music/配音/P7.mp3');
+        noteimageP7speaker.addEventListener('click',()=>
+        {
+            effectAudioP7speaker.currentTime = 0;
+            effectAudioP7speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+        const noteimageP9speaker =document.getElementById('P9speaker');
+        const effectAudioP9speaker =new Audio('music/配音/P9.mp3');
+        noteimageP9speaker.addEventListener('click',()=>
+        {
+            effectAudioP9speaker.currentTime = 0;
+            effectAudioP9speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+        // const noteimageP10speaker =document.getElementById('P10speaker');
+        // const effectAudioP10speaker =new Audio('music/配音/P10.mp3');
+        // noteimageP10speaker.addEventListener('click',()=>
+        // {
+        //     effectAudioP10speaker.play();
+        // })
+        const noteimageP12speaker =document.getElementById('P12speaker');
+        const effectAudioP12speaker =new Audio('music/配音/P12.mp3');
+        noteimageP12speaker.addEventListener('click',()=>
+        {
+            effectAudioP12speaker.currentTime = 0;
+            effectAudioP12speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+        const noteimageP13speaker =document.getElementById('P13speaker');
+        const effectAudioP13speaker =new Audio('music/配音/P13.mp3');
+        noteimageP13speaker.addEventListener('click',()=>
+        {
+            effectAudioP13speaker.currentTime = 0;
+            effectAudioP13speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+        const noteimageP15speaker =document.getElementById('P15speaker');
+        const effectAudioP15speaker=new Audio('music/配音/P15.mp3');
+        noteimageP15speaker.addEventListener('click',()=>
+        {
+            effectAudioP15speaker.currentTime = 0;
+            effectAudioP15speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+        const noteimageP16speaker =document.getElementById('P16speaker');
+        const effectAudioP16speaker=new Audio('music/配音/P16.mp3');
+        noteimageP16speaker.addEventListener('click',()=>
+        {
+            effectAudioP16speaker.currentTime = 0;
+            effectAudioP16speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+        const noteimageP17speaker =document.getElementById('P17speaker');
+        const effectAudioP17speaker=new Audio('music/配音/P17.mp3');
+        noteimageP17speaker.addEventListener('click',()=>
+        {
+            effectAudioP17speaker.currentTime = 0;
+            effectAudioP17speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+        const noteimageP18speaker =document.getElementById('P18speaker');
+        const effectAudioP18speaker=new Audio('music/配音/P18.mp3');
+        noteimageP18speaker.addEventListener('click',()=>
+        {
+            effectAudioP18speaker.currentTime = 0;
+            effectAudioP18speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+        const noteimageP20speaker =document.getElementById('P20speaker');
+        const effectAudioP20speaker=new Audio('music/配音/P20.mp3');
+        noteimageP20speaker.addEventListener('click',()=>
+        {
+            effectAudioP20speaker.currentTime = 0;
+            effectAudioP20speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP21speaker.pause();
+            effectAudioP22speaker.pause();
+
+        })
+        const noteimageP21speaker =document.getElementById('P21speaker');
+        const effectAudioP21speaker=new Audio('music/配音/P21.mp3');
+        noteimageP21speaker.addEventListener('click',()=>
+        {
+            effectAudioP21speaker.currentTime = 0;
+            effectAudioP21speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP22speaker.pause();
+        })
+        const noteimageP22speaker =document.getElementById('P22speaker');
+        const effectAudioP22speaker=new Audio('music/配音/P22.mp3');
+        noteimageP22speaker.addEventListener('click',()=>
+        {
+            effectAudioP22speaker.currentTime = 0;
+            effectAudioP22speaker.play();
+
+            effectAudioP0speaker.pause();
+            effectAudioP2speaker.pause();
+            effectAudioP3speaker.pause();
+            effectAudioP4speaker.pause();
+            effectAudioP5speaker.pause();
+            effectAudioP7speaker.pause();
+            effectAudioP9speaker.pause();
+            effectAudioP12speaker.pause();
+            effectAudioP13speaker.pause();
+            effectAudioP15speaker.pause();
+            effectAudioP16speaker.pause();
+            effectAudioP17speaker.pause();
+            effectAudioP18speaker.pause();
+            effectAudioP20speaker.pause();
+            effectAudioP21speaker.pause();
+        })
+
+        //手蝶音樂
+        const noteimageP11note1 =document.getElementById('P11note1');
+        const effectAudioP11note1 =new Audio('music/音效/1.mp3');
+        noteimageP11note1.addEventListener('click',()=>
+        {
+            effectAudioP11note1.play();
+        })
+        const noteimageP11note2 =document.getElementById('P11note2');
+        const effectAudioP11note2 =new Audio('music/音效/2.mp3');
+        noteimageP11note2.addEventListener('click',()=>
+        {
+            effectAudioP11note2.play();
+        })
+        const noteimageP11note3 =document.getElementById('P11note3');
+        const effectAudioP11note3 =new Audio('music/音效/3.mp3');
+        noteimageP11note3.addEventListener('click',()=>
+        {
+            effectAudioP11note3.play();
+        })
+        const noteimageP11note4 =document.getElementById('P11note4');
+        const effectAudioP11note4 =new Audio('music/音效/4.mp3');
+        noteimageP11note4.addEventListener('click',()=>
+        {
+            effectAudioP11note4.play();
+        })
+        const noteimageP11note5 =document.getElementById('P11note5');
+        const effectAudioP11note5 =new Audio('music/音效/5.mp3');
+        noteimageP11note5.addEventListener('click',()=>
+        {
+            effectAudioP11note5.play();
+        })
+        const noteimageP11note6 =document.getElementById('P11note6');
+        const effectAudioP11note6 =new Audio('music/音效/6.mp3');
+        noteimageP11note6.addEventListener('click',()=>
+        {
+            effectAudioP11note6.play();
+        })
+        const noteimageP11note7 =document.getElementById('P11note7');
+        const effectAudioP11note7 =new Audio('music/音效/7.mp3');
+        noteimageP11note7.addEventListener('click',()=>
+        {
+            effectAudioP11note7.play();
+        })
+        
+         // 获取所有的音频元素
+        var audios = document.getElementsByTagName('audio');
+
+            // 监听音频元素的点击事件
+        for (var i = 1; i < audios.length; i++) {
+            audios[i].addEventListener('click', function(e) {
+            var currentAudio = e.target;
+    
+            // 暂停除当前音频以外的所有音频
+        for (var j = 1; j < audios.length; j++) {
+            if (audios[j] !== currentAudio) {
+            audios[j].pause();
+            }
+            }
+        });
+}
+       </script>
+
+    </body>
+</html>

@@ -1,0 +1,497 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 其他樣式設定 */
+}
+    #All
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* #containtOut{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1500px;
+        height: 800px;
+    } */
+    #containt
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 900px;
+        height: 650px;
+        /* overflow: hidden; */
+        /* background-color: rgb(238, 225, 255); */
+    }
+    .page {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .gotoUp {
+        position: absolute;
+        left: -10vw;
+        top: 50%;
+        width: 5vw;
+        cursor: pointer;
+    }
+    .gotodown {
+        position: absolute;
+        right:-10vw;
+        top:  50%;
+        width: 5vw;
+        cursor: pointer;
+    }
+    .gotoUp:hover{
+        filter: brightness(70%);
+    }
+    .gotodown:hover{
+        filter: brightness(70%);
+    }
+
+    .backgroundtop {
+
+        display: grid;
+        place-items: center;
+        margin: auto; 
+        width: 100%;
+        max-width: 450px;
+        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .background {
+        
+        display: grid;
+        place-items: center;
+        margin: auto; 
+        /* height: 100%; */
+        width: 100%;
+
+        max-width: 900px;
+        max-height: 650px;
+        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+    }
+    .background,
+    .other-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .bookmu
+    {
+        display: grid;
+        place-items: center;
+        margin: auto; 
+        width:100%; 
+        top:-4%;
+         height: 118%;
+        position: absolute;
+
+    }
+    .PagenumL{
+        position: absolute;
+        left:3%;
+        bottom: 2%;
+        font-size: 20px;
+    }
+    .PagenumR{
+        position: absolute;
+        right:3%;
+        bottom: 2%;
+        font-size: 20px;
+    }
+    .rectangle
+    {
+        background-color: rgba(255, 255, 255, 0.659);
+        height: 200px;
+        width: 200;
+        position: absolute;
+        border:5px solid rgba(255, 175, 100, 0.508);
+        border-radius: 30px;;
+    }
+
+    .parent:hover .rectangle,
+    .parent:hover .Text {
+        cursor: pointer;
+        transform: scale(1.5); /* 设置放大倍数，这里为1.2 */
+        transition: transform 0.3s ease; /* 设置过渡动画效果，这里为0.3秒的ease过渡 */
+    }
+    .Text:hover{
+        cursor: pointer;
+        transform: scale(1.5); /* 设置放大倍数，这里为1.2 */
+        transition: transform 0.3s ease; /* 设置过渡动画效果，这里为0.3秒的ease过渡 */
+    }
+    .glow-circle {
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.238);
+        position: relative;
+    }
+
+    .glow-circle::before {
+        content: "";
+        position: absolute;
+        /* top: -5px; */
+        /* left: -5px; */
+        width: calc(100% );
+        height: calc(100% );
+        border-radius: 50%;
+        box-shadow: 0 0 8px 5px rgb(255, 255, 255);
+        opacity: 10;
+        animation: glow-animation 1.5s infinite;
+    }
+
+    .playgamePic:hover{
+        transform: scale(1.2);
+        filter: brightness(90%);
+        transition: transform 0.3s ease; /* 设置过渡动画效果，这里为0.3秒的ease过渡 */
+
+    }
+    .speaker:hover{
+        transform: scale(1.2);
+        filter: brightness(90%);
+        transition: transform 0.3s ease; /* 设置过渡动画效果，这里为0.3秒的ease过渡 */
+    }
+ 
+@keyframes glow-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 1500px) {/*1140~1500*/
+    .gotoUp {
+        position: absolute;
+        left: -5vw;
+        top: 50%;
+        width: 5vw;
+        cursor: pointer;
+    }
+    .gotodown {
+        position: absolute;
+        right:-5vw;
+        top:  50%;
+        width: 5vw;
+        cursor: pointer;
+        
+        
+    }
+    .page {
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+    .page1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 100%;
+        display: none;
+      }
+      #goDown0{
+        position: absolute;
+        right:-1vw;
+        top:  50%;
+        width: 5vw;
+        cursor: pointer;
+      }
+    
+    .backgroundtop{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        
+      }
+      }
+
+    @media only screen and (max-width: 1140px) {/**/
+        .gotoUp {
+            position: absolute;
+            left: -5vw;
+            top: 50%;
+            width: 5vw;
+            cursor: pointer;
+        }
+        .gotodown {
+            position: absolute;
+            right:-5vw;
+            top:  50%;
+            width: 5vw;
+            cursor: pointer;
+            
+            
+        }
+        .page {
+            position: absolute;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            display: none;
+          }
+          .page1 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 100%;
+            display: none;
+          }
+        }
+        @media only screen and (max-width: 1010px) {/*(iphone)*/
+            .gotoUp {
+                position: absolute;
+                left: -5vw;
+                top: 50%;
+                width: 5vw;
+                cursor: pointer;
+            }
+            .gotodown {
+                position: absolute;
+                right:-5vw;
+                top:  50%;
+                width: 5vw;
+                cursor: pointer;
+                
+                
+            }
+            .page {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 80%;
+                display: none;
+              }
+              .page1 {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 100%;
+                display: none;
+              }
+              
+              .backgroundtop{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                
+              }
+              .speaker #audio1{
+                position: absolute;
+                left: 10%;
+                top: 20%;
+                transform: translate(-50%, -50%);
+                display: none;
+              }
+              
+            }
+              @media only screen and (max-width: 810px) {/**/
+                .gotoUp {
+                    position: absolute;
+                    left: -4vw;
+                    top: 50%;
+                    width: 5vw;
+                    cursor: pointer;
+                }
+                .gotodown {
+                    position: absolute;
+                    right:-4vw;
+                    top:  50%;
+                    width: 5vw;
+                    cursor: pointer;
+                    
+                    
+                }
+                .page {
+                    position: absolute;
+                    left: 50%;
+                    top:50%;
+                    transform: translate(-50%, -50%);
+                    width: 70%;
+                    height: 70%;
+                    display: none;
+                  }
+                .page1 {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80%;
+                    height: 100%;
+                    display: none;
+                  }
+                }
+                .backgroundtop{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    
+                  }
+                .speaker {
+                    position: absolute; 
+                    top:1%; 
+                    left:10%; 
+                    width:8%;
+                    cursor: pointer;
+                  }
+                @media only screen and (max-width: 710px) /**/
+                  {
+                    .gotoUp {
+                        position: absolute;
+                        left: -5vw;
+                        top: 50%;
+                        width: 5vw;
+                        cursor: pointer;
+                    }
+                    .gotodown {
+                        position: absolute;
+                        right:-5vw;
+                        top:  50%;
+                        width: 5vw;
+                        cursor: pointer;
+                        
+                        
+                    }
+                    
+                    .page {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 60%;
+                        height: 60%;
+                        display: none;
+                      }
+                      .page1 {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 80%;
+                        height: 100%;
+                        display: none;
+                      }
+                    }
+                    @media only screen and (max-width: 610px) /**/
+                  {
+                    .gotoUp {
+                        position: absolute;
+                        left: -5vw;
+                        top: 50%;
+                        width: 5vw;
+                        cursor: pointer;
+                    }
+                    .gotodown {
+                        position: absolute;
+                        right:-5vw;
+                        top:  50%;
+                        width: 5vw;
+                        cursor: pointer;
+                        
+                        
+                    }
+                    .page {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 50%;
+                        height: 50%;
+                        display: none;
+                      }
+                      .page1 {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width:80%;
+                        height: 90%;
+                        display: none;
+                      }
+                      .speaker {
+                        position: absolute; 
+                        top:1%; 
+                        left:20%; 
+                        width:8%;
+                        cursor: pointer;
+                      }
+                    }
+                    @media only screen and (max-width: 500px) /**/
+                  {
+                    .gotoUp {
+                        position: absolute;
+                        left: -5vw;
+                        top: 50%;
+                        width: 5vw;
+                        cursor: pointer;
+                    }
+                    .gotodown {
+                        position: absolute;
+                        right:-5vw;
+                        top:  50%;
+                        width: 5vw;
+                        cursor: pointer;
+                        
+                        
+                    }
+                    .page {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 40%;
+                        height: 40%;
+                        display: none;
+                      }
+                      .page1 {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width:80%;
+                        height: 90%;
+                        display: none;
+                      }
+                      .speaker {
+                        position: absolute; 
+                        top:1%; 
+                        left:20%; 
+                        width:8%;
+                        cursor: pointer;
+                      }
+                    }
