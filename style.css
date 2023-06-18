@@ -299,7 +299,7 @@ body {
                 top: 50%;
                 transform: translate(-50%, -50%);
                 width: 70%;
-                height: 80%;
+                height: 90%;
                 display: none;
               }
               
@@ -313,13 +313,13 @@ body {
               #audio1{
                 position: absolute; 
                     top:1%; 
-                    left:20%; 
+                    left:15%; 
                     width:8%;
                     cursor: pointer;
               }
               #goDown0{
                 position: absolute;
-                right:16vw;
+                right:8vw;
                 top:  50%;
                 width: 6vw;
                 cursor: pointer;
@@ -357,8 +357,8 @@ body {
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
-                    width: 80%;
-                    height: 90%;
+                    width: 65%;
+                    height: 85%;
                     display: none;
                   }
                 }
@@ -407,13 +407,13 @@ body {
                         left: 50%;
                         top: 50%;
                         transform: translate(-50%, -50%);
-                        width: 80%;
-                        height: 90%;
+                        width: 65%;
+                        height: 85%;
                         display: none;
                       }
                       #goDown0{
                         position: absolute;
-                        right:20vw;
+                        right:10vw;
                         top:  50%;
                         width: 6vw;
                         cursor: pointer;
@@ -451,20 +451,27 @@ body {
                         left: 50%;
                         top: 50%;
                         transform: translate(-50%, -50%);
-                        width:80%;
-                        height: 90%;
+                        width:60%;
+                        height: 80%;
                         display: none;
                       }
                       .speaker {
                         position: absolute; 
                         top:1%; 
-                        left:20%; 
+                        left:5%; 
                         width:8%;
                         cursor: pointer;
                       }
+                      #audio1{
+                        position: absolute; 
+                            top:1%; 
+                            left:10%; 
+                            width:8%;
+                            cursor: pointer;
+                      }
                       #goDown0{
                         position: absolute;
-                        right:22vw;
+                        right:8vw;
                         top:  50%;
                         width: 6vw;
                         cursor: pointer;
@@ -502,20 +509,27 @@ body {
                         left: 50%;
                         top: 50%;
                         transform: translate(-50%, -50%);
-                        width:80%;
-                        height: 90%;
+                        width:50%;
+                        height: 70%;
                         display: none;
                       }
                       .speaker {
                         position: absolute; 
                         top:1%; 
-                        left:20%; 
+                        left:10%; 
                         width:8%;
                         cursor: pointer;
                       }
+                      #audio1{
+                        position: absolute; 
+                            top:1%; 
+                            left:5%; 
+                            width:8%;
+                            cursor: pointer;
+                      }
                       #goDown0{
                         position: absolute;
-                        right:30vw;
+                        right:1vw;
                         top:  50%;
                         width: 6vw;
                         cursor: pointer;
