@@ -298,8 +298,8 @@ body {
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                width: 70%;
-                height: 90%;
+                width: 60%;
+                height: 80%;
                 display: none;
               }
               
@@ -357,8 +357,8 @@ body {
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
-                    width: 65%;
-                    height: 85%;
+                    width: 55%;
+                    height: 75%;
                     display: none;
                   }
                 }
@@ -407,8 +407,8 @@ body {
                         left: 50%;
                         top: 50%;
                         transform: translate(-50%, -50%);
-                        width: 65%;
-                        height: 85%;
+                        width: 50%;
+                        height: 70%;
                         display: none;
                       }
                       #goDown0{
@@ -451,8 +451,8 @@ body {
                         left: 50%;
                         top: 50%;
                         transform: translate(-50%, -50%);
-                        width:60%;
-                        height: 80%;
+                        width:45%;
+                        height: 65%;
                         display: none;
                       }
                       .speaker {
@@ -509,8 +509,8 @@ body {
                         left: 50%;
                         top: 50%;
                         transform: translate(-50%, -50%);
-                        width:50%;
-                        height: 70%;
+                        width:40%;
+                        height: 60%;
                         display: none;
                       }
                       .speaker {
